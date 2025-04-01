@@ -1,0 +1,31 @@
+<?php
+session_start();
+include 'db_connect.php';
+
+if (!isset($_SESSION['admin_id'])) {
+    header("Location: admin_login.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <a href="approve_deliveries.php"><button>Approve Deliveries</button></a>
+        <a href="approve_payments.php"><button>Approve Payments</button></a>
+        <a href="approve_inputs.php"><button>Approve Inputs</button></a>
+        <a href="logout.php"><button>Logout</button></a>
+    </div>
+</body>
+
+</html>

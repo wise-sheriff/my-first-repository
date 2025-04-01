@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Welcome, Farmer!</h2>
+        <button class="toggle-btn" data-target="deliveries">View Deliveries</button>
+        <button class="toggle-btn" data-target="payments">View Payments</button>
+        <button class="toggle-btn" data-target="inputs">View Issued Inputs</button>
+        <button class="toggle-btn" data-target="reports">Generate Reports</button>
+        <button onclick="window.location.href='logout.php'">Logout</button>
+
+        <div id="deliveries" class="section" style="display:none;">
+            <h3>Maize Deliveries</h3>
+            <p>Details about delivered produce...</p>
+        </div>
+
+        <div id="payments" class="section" style="display:none;">
+            <h3>Payment Records</h3>
+            <p>Track received payments...</p>
+        </div>
+
+        <div id="inputs" class="section" style="display:none;">
+            <h3>Issued Inputs</h3>
+            <p>View fertilizer and pesticide records...</p>
+        </div>
+
+        <div id="reports" class="section" style="display:none;">
+            <h3>Reports</h3>
+            <button onclick="generateReport()">Download Report</button>
+        </div>
+    </div>
+</body>
+
+</html>

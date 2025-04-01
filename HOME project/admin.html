@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard-WKSMS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+    <h1>Admin Dashboard</h1>
+    <h2>Add Farmer</h2>
+    <form id="addFarmerForm">
+        <input type="text" id="farmerName" placeholder="Farmer Name"required>
+        <input type="email" id="farmerEmail" placeholder="Email"required>
+        <input type="text" id="farmerPhone" placeholder="Phone" required>
+        <button type="submit">Add Farmer</button>
+    </form>
+    <h2>Farmers List</h2>
+    <ul id="farmersList"></ul>
+    <h2>Generate Report</h2>
+    <button id="generateReport">Generate Report</button>
+    <pre id="reportOutput"></pre>
+ </div>
+ <script src="script.js"></script>
+</body>
+</html>
